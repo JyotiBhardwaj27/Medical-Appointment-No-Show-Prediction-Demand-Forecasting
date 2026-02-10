@@ -1,1 +1,19 @@
+# Core
+streamlit
+pandas
+numpy
+scipy
+
+# ML
+scikit-learn==1.3.2
+xgboost
+imbalanced-learn
+category-encoders
+
+# Model handling
+joblib
+
+# Visualization
+matplotlib
+seaborn
 
