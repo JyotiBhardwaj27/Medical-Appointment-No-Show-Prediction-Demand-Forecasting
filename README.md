@@ -40,7 +40,7 @@ No installation required – open the link and start using.
 
 ## 📂 Project Structure
 ├── streamlit_dashboard.py
-├── demand_forecast_modeL.pkl
+├── demand_forecast_model.pkl
 ├── no_show_model.pkl
 ├── encoders.pkl
 ├── Medical_appointment_data.csv
