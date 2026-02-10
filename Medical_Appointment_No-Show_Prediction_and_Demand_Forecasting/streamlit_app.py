@@ -156,7 +156,7 @@ elif menu=="Models Explainability":
         st.subheader("Risk Pattern by Age & Specialty")
 
         try:
-            df = pd.read_csv("Medical_appointment_data.csv")
+            df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
 
             # ----- CREATE AGE GROUPING INSIDE STREAMLIT -----
             df['age_group'] = pd.cut(
@@ -204,7 +204,7 @@ elif menu=="Models Explainability":
 
             # demand_model = joblib.load("demand_forecast_model.pkl")
 
-            df = pd.read_csv("Medical_appointment_data.csv")
+            df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
             df['appointment_date_continuous'] = pd.to_datetime(df['appointment_date_continuous'])
 
             daily = df.groupby('appointment_date_continuous').size().reset_index(name='demand')
@@ -265,33 +265,13 @@ elif menu=="Models Explainability":
     • Demand charts → validate forecasting logic  
     • Lag view → proves time dependency  
     """)
-# elif menu=="Visualizations":
-#     st.markdown('<div class="card">Model Drivers</div>',unsafe_allow_html=True)
-
-#     if hasattr(clf,"feature_importances_"):
-#         imp=pd.DataFrame({
-#             "feature":clf.feature_names_in_,
-#             "importance":clf.feature_importances_
-#         }).sort_values("importance",ascending=False).head(10)
-
-#         fig=plt.figure()
-#         plt.barh(imp["feature"],imp["importance"])
-#         plt.title("Top Influencing Factors")
-#         st.pyplot(fig)
-
-#         st.write("""
-#         Interpretation Guide  
-#         • Higher importance = stronger influence on no‑show  
-#         • Weather & Location dominates  
-#         • Use for targeted reminders
-#         """)
 
 # ---------- MODULE 4 ----------
 
 elif menu == "Demand & Specialty Forecast":
 
     st.header("📈 Demand Forecasting")
-    df = pd.read_csv("Medical_appointment_data.csv")
+    df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
 
     df['appointment_date_continuous'] = pd.to_datetime(df['appointment_date_continuous'])
 
