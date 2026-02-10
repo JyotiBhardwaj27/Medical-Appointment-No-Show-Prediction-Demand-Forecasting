@@ -25,7 +25,7 @@ An end-to-end analytics platform for predicting **appointment no-shows** and **h
 
 The application is deployed on Streamlit Cloud:
 
-👉 **YOUR_STREAMLIT_CLOUD_LINK_HERE**
+👉 **https://medical-appointment-no-show-prediction-demand-forecasting-synz.streamlit.app/**
 
 No installation required – open the link and start using.
 
