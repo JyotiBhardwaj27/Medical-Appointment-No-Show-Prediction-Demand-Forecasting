@@ -1,5 +1,3 @@
-import sklearn, xgboost, category_encoders
-st.write("sklearn:", sklearn.__version__)
 import streamlit as st
 import pandas as pd
 import numpy as np
