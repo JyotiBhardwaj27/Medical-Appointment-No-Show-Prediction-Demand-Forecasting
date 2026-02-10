@@ -204,7 +204,7 @@ elif menu=="Models Explainability":
         try:
             import joblib
 
-            demand_model = joblib.load("demand_forecast_model.pkl")
+            # demand_model = joblib.load("demand_forecast_model.pkl")
 
             df = pd.read_csv("Medical_appointment_data.csv")
             df['appointment_date_continuous'] = pd.to_datetime(df['appointment_date_continuous'])
