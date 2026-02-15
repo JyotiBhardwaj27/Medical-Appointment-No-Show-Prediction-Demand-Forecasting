@@ -16,10 +16,10 @@ menu = st.sidebar.radio("Navigation",
 
 @st.cache_resource
 def load_all():
-    clf = joblib.load("no_show_model.pkl")
-    enc = joblib.load("encoders.pkl")
-    demand = joblib.load("demand_forecast_model_v2.pkl")
-    demand_features = joblib.load("demand_features_v2.pkl")
+    clf = joblib.load("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/no_show_model.pkl")
+    enc = joblib.load("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/encoders.pkl")
+    demand = joblib.load("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/demand_forecast_model_v2.pkl")
+    demand_features = joblib.load("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/demand_features_v2.pkl")
     return clf, enc, demand, demand_features
 
 clf, encoders, demand_model, demand_features = load_all()
