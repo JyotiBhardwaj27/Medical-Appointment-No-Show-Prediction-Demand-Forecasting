@@ -191,11 +191,11 @@ elif menu == "Models Explainability":
     # 3️⃣ DEMAND MODEL FIT (OFFICIAL TEST METRICS)
     # ======================================================
 
-    st.subheader("Demand Model Performance (Test Set)")
+    st.subheader("Demand Model Performance")
 
     try:
         # Load saved official metrics
-        metrics = joblib.load("demand_model_metrics.pkl")
+        metrics = joblib.load("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/demand_model_metrics.pkl")
 
         c1, c2, c3 = st.columns(3)
 
