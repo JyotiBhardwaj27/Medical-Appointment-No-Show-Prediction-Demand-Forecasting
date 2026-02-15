@@ -124,7 +124,6 @@ elif menu == "CSV Batch Scoring":
         )
 
 # ---------- MODULE 3 ----------
-# ---------- MODULE 3 ----------
 elif menu == "Models Explainability":
 
     st.markdown('<div class="section-header">📊 Model Explainability & Insights</div>', unsafe_allow_html=True)
@@ -156,7 +155,7 @@ elif menu == "Models Explainability":
     st.subheader("Patient Distribution by Age Group & Specialty")
 
     try:
-        df = pd.read_csv("Medical_appointment_data.csv")
+        df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
 
         df['age_group'] = pd.cut(
             df['age'],
@@ -219,7 +218,7 @@ elif menu == "Models Explainability":
     st.subheader("Historical Model Fit")
 
     try:
-        df = pd.read_csv("Medical_appointment_data.csv")
+        df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
         df['appointment_date_continuous'] = pd.to_datetime(df['appointment_date_continuous'])
 
         daily = (
@@ -298,7 +297,7 @@ elif menu == "Demand & Specialty Forecast":
 
     st.markdown('<div class="section-header">📈 Demand Forecasting Engine</div>', unsafe_allow_html=True)
 
-    df = pd.read_csv("Medical_appointment_data.csv")
+    df = pd.read_csv("Medical_Appointment_No-Show_Prediction_and_Demand_Forecasting/Medical_appointment_data.csv")
     df['appointment_date_continuous'] = pd.to_datetime(df['appointment_date_continuous'])
 
     col1, col2 = st.columns([1,1])
